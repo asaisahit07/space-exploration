@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Exploration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<button id="topBtn">⬆</button>
+<body>
+
+    <nav id="navbar">
+    <a href="#hero">Home</a>
+    <a href="#apod-section">Discoveries</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#future">Future</a>
+    <a href="#unknown-facts-section">Unknown Facts</a>
+</nav>
+    <div id="earthScene"><canvas id="spaceCanvas"></canvas></div>
+    
+    <section id="hero">
+        <h1 id="title">Space Exploration</h1>
+        <p id="subtitle">Journey through the stars, planets, and beyond.</p>
+    </section>
+
+    <section id="apod-section" class="flex-container">
+        <img id="apod" alt="NASA Image">
+        <div class="text-content">
+            <h2>Today's Discovery</h2>
+            <p id="desc">Loading mission data...</p>
+        </div>
+    </section>
+
+    <section id="dashboard" class="dashboard-grid">
+    <div class="glass-box">
+        <h3>Near Earth Objects</h3>
+        <p id="asteroid-info">Fetching data...</p>
+    </div>
+
+    <div class="glass-box">
+        <h3>Mars Weather</h3>
+        <p id="mars-info">Fetching data...</p>
+    </div>
+
+    <div class="glass-box">
+        <h3>Earth Facts</h3>
+        <p>
+            Diameter: 12,742 km
+            <br><br>
+            Age: 4.54 Billion Years
+            <br><br>
+            Moons: 1
+        </p>
+    </div>
+</section>
+<section class="planet-section">
+    <h2>🌙 Moon</h2>
+    <p>
+        Earth's only natural satellite.
+        Distance from Earth: 384,400 km.
+        Gravity is 1/6th of Earth's gravity.
+    </p>
+</section>
+
+<section class="planet-section">
+    <h2>🔴 Mars</h2>
+    <p>
+        The Red Planet.
+        Home to Olympus Mons,
+        the tallest volcano in the Solar System.
+    </p>
+</section>
+
+<section class="planet-section">
+    <h2>🟠 Jupiter</h2>
+    <p>
+        Largest planet in our Solar System.
+        Famous for its Great Red Spot storm.
+    </p>
+</section>
+
+<section id="timeline">
+    <h2>🚀 Space Exploration Timeline</h2>
+
+    <div class="event">
+        <h3>1957</h3>
+        <p>Sputnik 1 launched.</p>
+    </div>
+
+    <div class="event">
+        <h3>1969</h3>
+        <p>Apollo 11 landed on the Moon.</p>
+    </div>
+
+    <div class="event">
+        <h3>1990</h3>
+        <p>Hubble Space Telescope launched.</p>
+    </div>
+
+    <div class="event">
+        <h3>2021</h3>
+        <p>James Webb Space Telescope launched.</p>
+    </div>
+</section>
+
+<section id="future">
+    <h2>🌌 Future of Space Exploration</h2>
+
+    <p>
+        Humans are preparing missions to Mars,
+        lunar bases,
+        asteroid mining,
+        and deep-space exploration.
+    </p>
+</section>
+
+<section id="unknown-facts-section">
+
+    <h2>🌌 Unknown Facts</h2>
+
+    <button id="showFactsBtn">
+        Explore Cosmic Mysteries
+    </button>
+
+    <div id="unknownFactsContainer" style="display:none;">
+
+        <div class="fact-card">
+            <h3>🕳️ Black Holes</h3>
+            <p>
+                Black holes are regions where gravity is so strong
+                that even light cannot escape.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>🌀 Wormholes</h3>
+            <p>
+                Wormholes are theoretical shortcuts through space-time
+                that could connect distant regions of the universe.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>🌑 Dark Matter</h3>
+            <p>
+                Scientists believe dark matter makes up most of the
+                matter in the universe, yet nobody knows exactly what it is.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>⚡ Dark Energy</h3>
+            <p>
+                Dark energy is causing the universe to expand faster
+                and faster.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>⭐ Neutron Stars</h3>
+            <p>
+                A teaspoon of neutron star material would weigh
+                billions of tons on Earth.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+    <footer><p>Credits: Data and imagery provided by NASA Open APIs.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
